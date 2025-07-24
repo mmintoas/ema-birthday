@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun, Ema Lestari!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 90%;
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #e94560;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            animation: bounceIn 1s ease-out;
+        }
+
+        h2 {
+            color: #d12e52;
+            font-size: 1.8em;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+            text-align: left;
+            font-size: 1.1em;
+        }
+
+        ul li {
+            background-color: #ffe0e6;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li::before {
+            content: '💖';
+            margin-right: 10px;
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-size: 1.3em;
+            font-family: 'Pacifico', cursive;
+            color: #d12e52;
+        }
+
+        .emphasis {
+            font-weight: 700;
+            color: #e94560;
+        }
+
+        .animated-text {
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        /* Confetti animation */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fce4ec; /* Light pink */
+            border-radius: 50%;
+            opacity: 0;
+            animation: fall 5s linear infinite;
+        }
+
+        .confetti:nth-child(2n) { background-color: #ffccbc; } /* Peach */
+        .confetti:nth-child(3n) { background-color: #fff9c4; } /* Light yellow */
+        .confetti:nth-child(4n) { background-color: #dcedc8; } /* Light green */
+        .confetti:nth-child(5n) { background-color: #bbdefb; } /* Light blue */
+        .confetti:nth-child(6n) { background-color: #e1bee7; } /* Lavender */
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+            0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+            20% { transform: scale3d(1.1, 1.1, 1.1); }
+            40% { transform: scale3d(0.9, 0.9, 0.9); }
+            60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
+            80% { transform: scale3d(0.97, 0.97, 0.97); }
+            100% { opacity: 1; transform: scale3d(1, 1, 1); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotateZ(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(100vh) rotateZ(720deg); opacity: 0; }
+        }
+
+        /* Generate multiple confetti pieces */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fce4ec; /* Example color */
+            border-radius: 50%;
+            animation: fall 5s linear infinite;
+        }
+
+        /* Add more confetti pieces dynamically with JS for better control */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Ulang Tahun ke-23!</h1>
+        <h2>Untuk Ema Lestari Tercinta,</h2>
+
+        <p>Dari Mas Minto,</p>
+
+        <p>Di hari spesial ulang tahunmu yang ke-23 ini, Mas Minto berdoa semoga dengan bertambahnya usiamu, kamu menjadi lebih baik lagi dalam segala hal. Semoga:</p>
+
+        <ul>
+            <li>Ibadahmu semakin ditingkatkan.</li>
+            <li>Dilancarkan segala rezekimu.</li>
+            <li>Dilancarkan segala urusanmu.</li>
+            <li>Diberikan kesehatan yang prima.</li>
+            <li>Selalu berbakti kepada orang tua.</li>
+            <li>Dimudahkan segala urusanmu.</li>
+            <li>Ditambah nikmat ibadahmu.</li>
+            <li>Ditambah kesabaranmu.</li>
+            <li>Selamat dunia dan akhirat.</li>
+        </ul>
+
+        <p class="emphasis animated-text">*Aamiin Ya Robbal Alamin.*</p>
+
+        <p>Sabar dan kuat terus yaa menghadapi dunia ini. Memang berat, tapi kamu pasti kuat! <span class="emphasis">Semangattt 😄</span></p>
+
+        <p class="signature">Dari Mas Minto</p>
+    </div>
+
+    <script>
+        // Generate confetti dynamically for a more varied effect
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDuration = Math.random() * 3 + 2 + 's'; // 2-5 seconds
+            confetti.style.animationDelay = Math.random() * 2 + 's'; // 0-2 seconds delay
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`; // Random pastel color
+            document.body.appendChild(confetti);
+
+            confetti.addEventListener('animationend', () => {
+                confetti.remove();
+            });
+        }
+
+        setInterval(createConfetti, 100); // Create a new confetti every 100ms
+    </script>
+</body>
+</html>

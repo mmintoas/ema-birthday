@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Ulang Tahun, Ema Lestari!</title>
+    <title>Selamat Ulang Tahun, Ema Lestari! 🎉</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -24,30 +24,37 @@
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95); /* Lebih solid */
             padding: 40px 60px;
             border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Shadow lebih dalam */
             max-width: 800px;
             width: 90%;
             animation: fadeIn 1.5s ease-out;
             position: relative;
             z-index: 10;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transisi untuk hover */
+        }
+
+        .container:hover {
+            transform: translateY(-5px); /* Sedikit naik saat dihover */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Shadow lebih besar saat dihover */
         }
 
         h1 {
             font-family: 'Pacifico', cursive;
             color: #e94560;
-            font-size: 3.5em;
-            margin-bottom: 20px;
+            font-size: 3.8em; /* Ukuran lebih besar */
+            margin-bottom: 15px;
             animation: bounceIn 1s ease-out;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Tambah shadow teks */
         }
 
         h2 {
             color: #d12e52;
-            font-size: 1.8em;
-            margin-top: -10px;
-            margin-bottom: 30px;
+            font-size: 2em; /* Ukuran lebih besar */
+            margin-top: -5px;
+            margin-bottom: 35px;
         }
 
         p {
@@ -67,11 +74,17 @@
         ul li {
             background-color: #ffe0e6;
             margin-bottom: 10px;
-            padding: 10px 15px;
-            border-radius: 8px;
+            padding: 12px 20px; /* Padding lebih besar */
+            border-radius: 10px; /* Radius lebih besar */
             display: flex;
             align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Transisi untuk list item */
+        }
+
+        ul li:hover {
+            transform: translateX(10px); /* Geser ke kanan saat dihover */
+            background-color: #ffd1dc; /* Warna sedikit lebih gelap saat dihover */
         }
 
         ul li::before {
@@ -81,9 +94,10 @@
 
         .signature {
             margin-top: 40px;
-            font-size: 1.3em;
+            font-size: 1.4em; /* Ukuran lebih besar */
             font-family: 'Pacifico', cursive;
             color: #d12e52;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
         }
 
         .emphasis {
@@ -113,6 +127,48 @@
         .confetti:nth-child(5n) { background-color: #bbdefb; } /* Light blue */
         .confetti:nth-child(6n) { background-color: #e1bee7; } /* Lavender */
 
+        /* Button styling */
+        .reveal-button {
+            background-color: #ff6f61; /* Merah cerah */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px; /* Bentuk pil */
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease; /* Transisi untuk button */
+        }
+
+        .reveal-button:hover {
+            background-color: #e65a50; /* Sedikit lebih gelap saat hover */
+            transform: translateY(-3px); /* Sedikit naik saat hover */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .reveal-button:active {
+            transform: translateY(1px); /* Sedikit turun saat diklik */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #additionalMessage {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #666;
+            opacity: 0; /* Awalnya tersembunyi */
+            max-height: 0; /* Awalnya tersembunyi */
+            overflow: hidden;
+            transition: opacity 0.5s ease-out, max-height 0.7s ease-out; /* Transisi saat muncul */
+        }
+
+        #additionalMessage.visible {
+            opacity: 1;
+            max-height: 100px; /* Atur ketinggian yang cukup */
+        }
+
+        /* Keyframe animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -141,19 +197,6 @@
             10% { opacity: 1; }
             100% { transform: translateY(100vh) rotateZ(720deg); opacity: 0; }
         }
-
-        /* Generate multiple confetti pieces */
-        body::before, body::after {
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #fce4ec; /* Example color */
-            border-radius: 50%;
-            animation: fall 5s linear infinite;
-        }
-
-        /* Add more confetti pieces dynamically with JS for better control */
     </style>
 </head>
 <body>
@@ -181,6 +224,12 @@
 
         <p>Sabar dan kuat terus yaa menghadapi dunia ini. Memang berat, tapi kamu pasti kuat! <span class="emphasis">Semangattt 😄</span></p>
 
+        <button class="reveal-button" id="revealBtn">Ada Pesan Spesial Lagi!</button>
+
+        <div id="additionalMessage">
+            <p>Ema, kamu adalah sosok yang luar biasa. Teruslah mengejar impianmu dan jangan pernah menyerah. Mas Minto selalu mendukungmu! 😊</p>
+        </div>
+
         <p class="signature">Dari Mas Minto</p>
     </div>
 
@@ -200,7 +249,24 @@
             });
         }
 
-        setInterval(createConfetti, 100); // Create a new confetti every 100ms
+        // Loop untuk membuat confetti
+        let confettiInterval = setInterval(createConfetti, 100); // Buat confetti setiap 100ms
+
+        // Tombol untuk menampilkan pesan tambahan
+        document.getElementById('revealBtn').addEventListener('click', function() {
+            const additionalMessage = document.getElementById('additionalMessage');
+            if (additionalMessage.classList.contains('visible')) {
+                additionalMessage.classList.remove('visible');
+                this.textContent = 'Ada Pesan Spesial Lagi!';
+                // Mulai lagi confetti kalau dihide
+                confettiInterval = setInterval(createConfetti, 100);
+            } else {
+                additionalMessage.classList.add('visible');
+                this.textContent = 'Sembunyikan Pesan Tambahan';
+                // Hentikan confetti saat pesan tambahan muncul
+                clearInterval(confettiInterval);
+            }
+        });
     </script>
 </body>
 </html>

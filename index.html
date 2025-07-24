@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #667eea 100%);
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -72,10 +72,18 @@
 
         .name-highlight {
             font-size: 2.5em;
-            color: #ffd700;
+            color: #ff6b9d;
             font-weight: 400;
             margin: 20px 0;
             text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .date-display {
+            font-size: 1.4em;
+            color: rgba(255, 255, 255, 0.9);
+            font-style: italic;
+            margin: 15px 0;
+            letter-spacing: 1px;
         }
 
         .age-display {
@@ -88,10 +96,22 @@
 
         .from-signature {
             font-size: 1.3em;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             font-style: italic;
             margin-bottom: 40px;
             font-weight: 300;
+        }
+
+        .romantic-message {
+            font-size: 1.3em;
+            color: rgba(255, 255, 255, 0.95);
+            font-style: italic;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-left: 4px solid #ff6b9d;
+            text-align: center;
         }
 
         .main-card {
@@ -113,18 +133,18 @@
         }
 
         .blessing-item {
-            background: rgba(102, 126, 234, 0.05);
+            background: linear-gradient(145deg, rgba(255, 107, 157, 0.08), rgba(102, 126, 234, 0.05));
             border-radius: 12px;
             padding: 25px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(255, 107, 157, 0.15);
         }
 
         .blessing-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
-            background: rgba(102, 126, 234, 0.08);
+            box-shadow: 0 15px 35px rgba(255, 107, 157, 0.2);
+            background: linear-gradient(145deg, rgba(255, 107, 157, 0.12), rgba(102, 126, 234, 0.08));
         }
 
         .blessing-icon {
@@ -181,7 +201,7 @@
         .element:nth-child(3) { animation-delay: 1s; }
 
         .action-button {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #ff6b9d, #667eea);
             color: white;
             border: none;
             padding: 18px 35px;
@@ -190,14 +210,14 @@
             cursor: pointer;
             margin: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
             font-weight: 400;
             letter-spacing: 0.5px;
         }
 
         .action-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4);
         }
 
         .footer-section {
@@ -258,12 +278,16 @@
             <h1 class="birthday-title">Happy Birthday</h1>
             <div class="name-highlight">Ema Lestari</div>
             <div class="age-display">23</div>
-            <p class="from-signature">~ Dari Mas Minto ~</p>
+            <div class="date-display">24 Juli 2025</div>
+            <p class="from-signature">~ Dengan cinta dari Mas Minto ~</p>
+            <div class="romantic-message">
+                "Semoga hari spesial ini membawa kebahagiaan yang tak terhingga untuk seseorang yang istimewa" 💕
+            </div>
         </div>
 
         <div class="decorative-elements">
             <span class="element">🎂</span>
-            <span class="element">✨</span>
+            <span class="element">💕</span>
             <span class="element">🌟</span>
         </div>
 
@@ -313,28 +337,28 @@
         </button>
 
         <div class="footer-section">
-            <p>Dibuat dengan penuh perhatian oleh Mas Minto</p>
-            <p>Semoga hari spesialmu membawa kebahagiaan ✨</p>
+            <p>Dibuat dengan ❤️ dan penuh kasih sayang oleh Mas Minto</p>
+            <p>Semoga hari istimewa ini membawa kebahagiaan yang berlimpah ✨</p>
         </div>
     </div>
 
     <script>
         // Collection of thoughtful wishes
         const specialWishes = [
-            "🌟 Semoga setiap langkahmu diberkahi Allah SWT",
-            "🌸 Jadilah pribadi yang selalu bersyukur dan bahagia",
-            "⭐ Tetap semangat dalam menggapai cita-cita",
-            "🌺 Semoga Allah memberikan yang terbaik untukmu",
-            "💫 Jadilah cahaya kebaikan bagi orang-orang di sekitarmu"
+            "💖 Semoga Allah selalu melindungi dan memberkahimu, sayang",
+            "🌸 Jadilah pribadi yang selalu bersinar dan membahagiakan hati",
+            "⭐ Tetap semangat menggapai mimpi-mimpi terindahmu",
+            "🌺 Semoga setiap langkahmu diberi kemudahan oleh-Nya",
+            "💫 Kamu adalah anugerah terindah yang patut disyukuri"
         ];
 
         // Collection of inspiring quotes
         const inspirationalQuotes = [
-            "\"Hidup ini indah jika kita pandai bersyukur\" 🌈",
-            "\"Setiap hari adalah kesempatan baru untuk berbuat baik\" ✨",
-            "\"Kesabaran adalah kunci dari segala kebaikan\" 🗝️", 
-            "\"Doa dan usaha adalah kekuatan terbesar dalam hidup\" 🤲",
-            "\"Kebahagiaan sejati datang dari hati yang ikhlas\" 💝"
+            "\"Hidup ini indah jika kita pandai bersyukur dan berbagi kasih\" 💝",
+            "\"Setiap hari adalah kesempatan baru untuk menjadi yang terbaik\" ✨",
+            "\"Kesabaran dan keikhlasan adalah kunci kebahagiaan sejati\" 🗝️", 
+            "\"Doa dan cinta adalah kekuatan terbesar dalam hidup\" 🤲💕",
+            "\"Kebahagiaan sejati datang dari hati yang penuh rasa syukur\" 🌈"
         ];
 
         function showWishes() {
@@ -356,11 +380,11 @@
             `;
             
             content.innerHTML = `
-                <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.5em;">Pesan Khusus Untukmu</h3>
+                <h3 style="color: #ff6b9d; margin-bottom: 20px; font-size: 1.5em;">💕 Pesan Khusus Untukmu</h3>
                 <p style="font-size: 1.3em; color: #2c3e50; margin-bottom: 30px;">${randomWish}</p>
                 <button onclick="this.parentElement.parentElement.remove()" 
-                        style="background: #667eea; color: white; border: none; padding: 12px 25px; 
-                               border-radius: 25px; cursor: pointer; font-size: 1em;">Terima Kasih</button>
+                        style="background: linear-gradient(45deg, #ff6b9d, #667eea); color: white; border: none; padding: 12px 25px; 
+                               border-radius: 25px; cursor: pointer; font-size: 1em;">Terima Kasih ❤️</button>
             `;
             
             modal.appendChild(content);
@@ -385,11 +409,11 @@
             `;
             
             content.innerHTML = `
-                <h3 style="color: #e67e22; margin-bottom: 20px; font-size: 1.5em;">Inspirasi Hari Ini</h3>
+                <h3 style="color: #e67e22; margin-bottom: 20px; font-size: 1.5em;">🌟 Inspirasi Hari Ini</h3>
                 <p style="font-size: 1.3em; color: #2c3e50; margin-bottom: 30px; font-style: italic;">${randomQuote}</p>
                 <button onclick="this.parentElement.parentElement.remove()" 
                         style="background: #e67e22; color: white; border: none; padding: 12px 25px; 
-                               border-radius: 25px; cursor: pointer; font-size: 1em;">Tutup</button>
+                               border-radius: 25px; cursor: pointer; font-size: 1em;">Tutup 💫</button>
             `;
             
             modal.appendChild(content);
